@@ -1,5 +1,7 @@
 provider "aws" {
   region = "us-east-1" # Escolha a região da AWS
+  shared_credentials_files = ["/runner/.aws/credentials"]
+  profile                  = "default"
 }
 
 resource "aws_s3_bucket" "hello_bucket" {
